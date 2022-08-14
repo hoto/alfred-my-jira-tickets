@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/hoto/alfred-my-jira-tickets#readme",
   "dependencies": {
-    "alfy": "1.0.0"
+    "alfy": "1.0.0",
+    "prettier": "2.7.1"
   }
 }

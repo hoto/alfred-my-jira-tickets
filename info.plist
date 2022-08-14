@@ -79,7 +79,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "ulid"</string>
+				<string>./node_modules/.bin/run-node index.js</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -122,6 +122,17 @@
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>variables</key>
+	<dict>
+		<key>jiraApiToken</key>
+		<string>yourJiraApiToken</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>jiraApiToken</string>
+	</array>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>https://github.com/hoto/alfred-my-jira-tickets</string>
 </dict>
