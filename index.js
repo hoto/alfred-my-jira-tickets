@@ -16,10 +16,7 @@ fetch(`${jiraUrl}/${currentUserOpenTickets}`, { headers: auth })
     alfy.output(
       data.issues
         .map((issue) => toAlfyOutputItem(issue))
-        .reduce((prev, curr) => {
-          prev.push(curr)
-          return prev
-        }, [])
+        .reduce((prev, curr) => [...prev, curr], [])
     )
   )
   .catch((err) => alfy.error(err))
