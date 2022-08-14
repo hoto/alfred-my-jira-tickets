@@ -15,7 +15,7 @@ fetch(`${jiraUrl}/${currentUserOpenTickets}`, { headers: auth })
   .then((data) =>
     alfy.output(
       data.issues
-        .map((issue) => toAlfyOutputItem(issue))
+        .map((issue) => toAlfyOutputItem(issue, jiraUrl))
         .reduce((prev, curr) => [...prev, curr], [])
     )
   )

@@ -8,7 +8,7 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>33A2729A-5885-48A4-8A59-040FF6825427</key>
+		<key>1DC30073-A06A-45C4-96D0-57B499EC7FAB</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -20,13 +20,91 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>319F3BF5-904D-4D42-BD44-2EAF3D6A0039</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>34FC75FE-B8EC-4103-B373-2A84A1576931</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>33A2729A-5885-48A4-8A59-040FF6825427</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>319F3BF5-904D-4D42-BD44-2EAF3D6A0039</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4C187F04-3398-4905-9538-05EB1434D8AB</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in the browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>34FC75FE-B8EC-4103-B373-2A84A1576931</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1DC30073-A06A-45C4-96D0-57B499EC7FAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4C187F04-3398-4905-9538-05EB1434D8AB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C3EF3325-DFB0-488B-B55F-3930ECE309D7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BEB77CAF-0FD9-4C55-8808-98DF0DA97878</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>71665DEE-0C09-4258-B30B-2389E1EDBD9E</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Open in browser</string>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C3EF3325-DFB0-488B-B55F-3930ECE309D7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BEB77CAF-0FD9-4C55-8808-98DF0DA97878</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -48,7 +126,7 @@
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>{query}</string>
+				<string>{var:issueId}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -113,6 +191,126 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<true/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>1DC30073-A06A-45C4-96D0-57B499EC7FAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>issueId</key>
+					<string>{var:split1}</string>
+					<key>jiraUrl</key>
+					<string>{var:split2}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>34FC75FE-B8EC-4103-B373-2A84A1576931</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>	</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>319F3BF5-904D-4D42-BD44-2EAF3D6A0039</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>	</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>4C187F04-3398-4905-9538-05EB1434D8AB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>issueId</key>
+					<string>{var:split1}</string>
+					<key>jiraUrl</key>
+					<string>{var:split2}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C3EF3325-DFB0-488B-B55F-3930ECE309D7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<true/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>BEB77CAF-0FD9-4C55-8808-98DF0DA97878</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -122,7 +320,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>{var:JIRA_URL}/browse/{query}</string>
+				<string>{var:jiraUrl}/browse/{var:issueId}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -136,6 +334,20 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>1DC30073-A06A-45C4-96D0-57B499EC7FAB</key>
+		<dict>
+			<key>xpos</key>
+			<real>525</real>
+			<key>ypos</key>
+			<real>145</real>
+		</dict>
+		<key>319F3BF5-904D-4D42-BD44-2EAF3D6A0039</key>
+		<dict>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>145</real>
+		</dict>
 		<key>33A2729A-5885-48A4-8A59-040FF6825427</key>
 		<dict>
 			<key>xpos</key>
@@ -143,19 +355,47 @@
 			<key>ypos</key>
 			<real>125</real>
 		</dict>
+		<key>34FC75FE-B8EC-4103-B373-2A84A1576931</key>
+		<dict>
+			<key>xpos</key>
+			<real>425</real>
+			<key>ypos</key>
+			<real>145</real>
+		</dict>
+		<key>4C187F04-3398-4905-9538-05EB1434D8AB</key>
+		<dict>
+			<key>xpos</key>
+			<real>310</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
 		<key>71665DEE-0C09-4258-B30B-2389E1EDBD9E</key>
 		<dict>
 			<key>xpos</key>
-			<real>260</real>
+			<real>645</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>285</real>
+		</dict>
+		<key>BEB77CAF-0FD9-4C55-8808-98DF0DA97878</key>
+		<dict>
+			<key>xpos</key>
+			<real>515</real>
+			<key>ypos</key>
+			<real>265</real>
+		</dict>
+		<key>C3EF3325-DFB0-488B-B55F-3930ECE309D7</key>
+		<dict>
+			<key>xpos</key>
+			<real>400</real>
+			<key>ypos</key>
+			<real>255</real>
 		</dict>
 		<key>DAEAD3C5-34B0-4E71-B21B-61C1B002F202</key>
 		<dict>
 			<key>xpos</key>
-			<real>260</real>
+			<real>630</real>
 			<key>ypos</key>
-			<real>125</real>
+			<real>120</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

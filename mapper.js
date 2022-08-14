@@ -1,4 +1,8 @@
-const toAlfyOutputItem = (issue) => {
+/**
+ * Passing jiraUrl is a hack to pass the url when opening issue in the browser.
+ * It's impossible to expose the variable from the "userConfig" to the workflow ATM (or I'm too stupid to figure it out).
+ */
+const toAlfyOutputItem = (issue, jiraUrl) => {
   const {
     key, // e.g. 'GJ-1234'
     fields: {
@@ -10,7 +14,7 @@ const toAlfyOutputItem = (issue) => {
   return {
     title: `${key}`,
     subtitle: `${summary}`,
-    arg: key,
+    arg: [key, jiraUrl],
     text: {
       copy: key,
       largetype: key,
