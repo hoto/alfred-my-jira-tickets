@@ -1,0 +1,27 @@
+{
+  "name": "@hoto/alfred-my-jira-tickets",
+  "version": "1.0.0",
+  "description": "Alfred workflow to fetch all active JIRA tickets assigned to you.   Either copies to ticket id or opens the ticket in browser.",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoto/alfred-my-jira-tickets.git"
+  },
+  "author": "Andrzej Rehmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoto/alfred-my-jira-tickets/issues"
+  },
+  "homepage": "https://github.com/hoto/alfred-my-jira-tickets#readme",
+  "dependencies": {
+    "alfy": "1.0.0"
+  }
+}
