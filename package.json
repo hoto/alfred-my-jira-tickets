@@ -23,6 +23,8 @@
   "homepage": "https://github.com/hoto/alfred-my-jira-tickets#readme",
   "dependencies": {
     "alfy": "1.0.0",
+    "btoa-lite": "1.0.0",
+    "node-fetch": "3.2.10",
     "prettier": "2.7.1"
   }
 }
