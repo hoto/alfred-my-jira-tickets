@@ -160,21 +160,6 @@
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
-	<key>variables</key>
-	<dict>
-		<key>JIRA_API_TOKEN</key>
-		<string>yourapitoken</string>
-		<key>JIRA_URL</key>
-		<string>https://yourcompanyname.atlassian.net</string>
-		<key>JIRA_USER</key>
-		<string>youremail</string>
-	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>JIRA_API_TOKEN</string>
-		<string>JIRA_URL</string>
-		<string>JIRA_USER</string>
-	</array>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>

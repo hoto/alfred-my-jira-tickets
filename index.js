@@ -3,9 +3,9 @@ import fetch from 'node-fetch'
 import btoa from 'btoa-lite'
 import toAlfyOutputItem from './mapper.js'
 
-const jiraUrl = process.env.JIRA_URL
-const jiraUser = process.env.JIRA_USER
-const jiraApiToken = process.env.JIRA_API_TOKEN
+const jiraUrl = alfy.userConfig.get('jiraUrl')
+const jiraUser = alfy.userConfig.get('jiraEmail')
+const jiraApiToken = alfy.userConfig.get('jiraApiKey')
 const credentials = btoa(`${jiraUser}:${jiraApiToken}`)
 const auth = { Authorization: `Basic ${credentials}` }
 const currentUserOpenTickets = `rest/api/3/search?jql=assignee=currentuser() AND status not in (Done,Closed)`
