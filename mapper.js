@@ -1,7 +1,3 @@
-/**
- * Passing jiraUrl is a hack to pass the url when opening issue in the browser.
- * It's impossible to expose the variable from the "userConfig" to the workflow ATM (or I'm too stupid to figure it out).
- */
 const toAlfyOutputItem = (issue, jiraUrl) => {
   const {
     key, // e.g. 'GJ-1234'
@@ -11,10 +7,11 @@ const toAlfyOutputItem = (issue, jiraUrl) => {
       updated, // e.g. '2022-08-12T12:28:24.346+0100'
     },
   } = issue
+  const kebabCaseSummary = summary.toLowerCase().trim().split(' ').join('-')
   return {
     title: `${key}`,
     subtitle: `${summary}`,
-    arg: [key, jiraUrl],
+    arg: [jiraUrl, key, summary, kebabCaseSummary], // hack to pass variables to the workflow
     text: {
       copy: key,
       largetype: key,
