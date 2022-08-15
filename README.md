@@ -2,8 +2,16 @@
 
 Alfred workflow to fetch all open JIRA tickets assigned to you.  
 
-Either copies to ticket id to clipboard (↩) or opens the ticket in the browser (⌘↩)
+Functionality:
 
+* copies the ticket id to clipboard `↩` (e.g. `GJ-1234`)
+* copies the git branch name to clipboard `⌃↩` (e.g. `GJ-1234-fix-a-bug`)
+* copies the PR description to clipboard `⌥↩` (e.g. `GJ-1234 Fix a bug`)
+* opens the ticket url in the browser `⌘↩`
+
+![](.images/01.png)
+
+Built in one minute cache.
 
 ### Install
 
