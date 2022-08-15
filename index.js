@@ -1,5 +1,4 @@
 import alfy from 'alfy'
-import fetch from 'node-fetch'
 import btoa from 'btoa-lite'
 import toAlfyOutputItem from './mapper.js'
 
@@ -10,8 +9,8 @@ const credentials = btoa(`${jiraUser}:${jiraApiToken}`)
 const auth = { Authorization: `Basic ${credentials}` }
 const currentUserOpenTickets = `rest/api/3/search?jql=assignee=currentuser() AND status not in (Done,Closed)`
 
-fetch(`${jiraUrl}/${currentUserOpenTickets}`, { headers: auth })
-  .then((response) => response.json())
+alfy
+  .fetch(`${jiraUrl}/${currentUserOpenTickets}`, { headers: auth })
   .then((data) =>
     alfy.output(
       data.issues

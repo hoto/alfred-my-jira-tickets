@@ -1,6 +1,6 @@
 {
   "name": "@hoto/alfred-my-jira-tickets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Alfred workflow to fetch all open JIRA tickets assigned to you.",
   "engines": {
     "node": ">=16.0.0"
@@ -24,7 +24,6 @@
   "dependencies": {
     "alfy": "1.0.0",
     "btoa-lite": "1.0.0",
-    "node-fetch": "3.2.10",
     "prettier": "2.7.1"
   }
 }
