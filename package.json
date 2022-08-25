@@ -1,6 +1,6 @@
 {
   "name": "@hoto/alfred-my-jira-tickets",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Alfred workflow to fetch all open JIRA tickets assigned to you.",
   "engines": {
     "node": ">=16.0.0"

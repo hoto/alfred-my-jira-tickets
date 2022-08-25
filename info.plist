@@ -457,27 +457,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>	</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>28232F02-6C33-40C1-9D30-D796DB3AE632</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>'{query}', {variables}</string>
 				<key>cleardebuggertext</key>
@@ -521,6 +500,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>delimiter</key>
+				<string>	</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>28232F02-6C33-40C1-9D30-D796DB3AE632</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -536,6 +536,32 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>71665DEE-0C09-4258-B30B-2389E1EDBD9E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>jiraUrl</key>
+					<string>{var:split1}</string>
+					<key>kebabCaseSummary</key>
+					<string>{var:split4}</string>
+					<key>key</key>
+					<string>{var:split2}</string>
+					<key>summary</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C3EF3325-DFB0-488B-B55F-3930ECE309D7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -574,32 +600,6 @@
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>BEB77CAF-0FD9-4C55-8808-98DF0DA97878</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>jiraUrl</key>
-					<string>{var:split1}</string>
-					<key>kebabCaseSummary</key>
-					<string>{var:split4}</string>
-					<key>key</key>
-					<string>{var:split2}</string>
-					<key>summary</key>
-					<string>{var:split3}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>C3EF3325-DFB0-488B-B55F-3930ECE309D7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>

@@ -7,7 +7,12 @@ const toAlfyOutputItem = (issue, jiraUrl) => {
       updated, // e.g. '2022-08-12T12:28:24.346+0100'
     },
   } = issue
-  const kebabCaseSummary = summary.toLowerCase().trim().split(' ').join('-')
+  const kebabCaseSummary = summary
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-zA-Z0-9 ]/g, '')
+    .split(' ')
+    .join('-')
   return {
     title: `${key}`,
     subtitle: `${summary}`,
